@@ -1,6 +1,5 @@
 import React from "react";
 import { observer } from "mobx-react";
-import cateStore from "../../stores/categoryStore";
 
 function CategoryItem({category}) {
   return <div>

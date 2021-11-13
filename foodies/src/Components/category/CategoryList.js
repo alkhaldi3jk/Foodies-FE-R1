@@ -1,10 +1,10 @@
 import React from "react";
 import { observer } from "mobx-react";
 import cateStore from "../../stores/categoryStore";
-
+import CategoryItem from './CategoryItem'
 function CategoryList() {
   const categoryList = cateStore.categories.map((category) => (
-    <CateItemItem key={category._id} category={category} />
+    <CategoryItem key={category._id} category={category} />
   ));
 
   return (
