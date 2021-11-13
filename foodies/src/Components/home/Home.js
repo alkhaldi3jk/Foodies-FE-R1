@@ -1,4 +1,7 @@
 import React from "react";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 
 function Home() {
   return (
@@ -6,7 +9,9 @@ function Home() {
       <h1>
         "A recipe has no soul. You, as the cook, must bring soul to the recipe."
       </h1>
-      <h3> Join Our Community</h3>
+      <Link to="/category">
+        <Button variant="outline-dark">Join Our Community</Button>
+      </Link>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav, Navbar, Container } from "react-bootstrap";
-import SignUpModal from "./SignUpModal";
-import SignInModal from "./SignInModal";
+import SignUpModal from "../auth/SignUpModal";
+import SignInModal from "../auth/SignInModal";
 import { observer } from "mobx-react";
 
 import authStore from "../../stores/authStore";
