@@ -12,20 +12,20 @@ function NavBar() {
       <>
         <Navbar bg="dark" variant="dark">
           <Container>
-            <Navbar.Brand href="home">Knights Kitchen</Navbar.Brand>
+            <Navbar.Brand href="/">Knights Kitchen</Navbar.Brand>
             <Nav className="me-auto">
-              <Nav.Link href="home">Home</Nav.Link>
-              <Nav.Link href="categories">Categories</Nav.Link>
-              <Nav.Link href="home">pricing</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="category">Categories</Nav.Link>
+              <Nav.Link href="/">pricing</Nav.Link>
               {!authStore.user ? (
                 <>
                   <SignInModal />
-                  
+
                   <SignUpModal />
                 </>
               ) : (
                 <Nav.Link
-                  href="home"
+                  href=""
                   variant="contained"
                   justify="space-between"
                   onClick={authStore.signOut}

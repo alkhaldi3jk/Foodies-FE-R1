@@ -3,7 +3,7 @@ import { observer } from "mobx-react";
 import cateStore from "../../stores/categoryStore";
 import CategoryItem from "./CategoryItem";
 import { Col, Row } from "react-bootstrap";
-
+import CategoryModal from './CategoryModal'
 function CategoryList() {
   const categoryList = cateStore.categories.map((category) => (
     <Col className="list">
@@ -14,6 +14,7 @@ function CategoryList() {
 
   return (
     <div>
+      <CategoryModal/>
       <Row> {categoryList}</Row>
     </div>
   );

@@ -3,19 +3,28 @@ import { Route, Switch } from "react-router";
 import Home from "./Components/home/Home";
 import NavBar from "./Components/home/NavBar";
 import CategoryList from "./Components/category/CategoryList";
-import { Col, Row,Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import RecipeList from "./Components/recipe/RecipeList";
+import CategoryDetail from "./Components/category/CategoryDetail";
 function App() {
   return (
     <>
       <NavBar />
       <Switch>
-        <Route path="/category">
+        <Route exact path="/category/:categorySlug/recipes">
           <Container>
-       
+            <RecipeList />
+          </Container>
+        </Route>
+        {/* <Route exact="/category/:categorySlug">
+          <CategoryDetail/>
+        </Route> */}
+        <Route exact path="/category">
+          <Container>
             <CategoryList />
           </Container>
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <div className="App">
             <Home />
           </div>
