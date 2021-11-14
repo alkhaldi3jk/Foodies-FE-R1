@@ -1,8 +1,9 @@
 import { React, useState } from "react";
-import { Col, Row, Form, Modal, Button } from "react-bootstrap";
+import {  Form, Modal, Button } from "react-bootstrap";
 import { observer } from "mobx-react";
 import categoryStore from "../../stores/categoryStore";
-
+import authStore from "../../stores/authStore";
+import SignUpModal from '../auth/SignUpModal'
 function CategoryModal() {
   const [category, setCategory] = useState({
     name: "",
@@ -26,9 +27,9 @@ function CategoryModal() {
 
   return (
     <div>
-      <Button variant="primary" onClick={handleShow}>
-        Launch static backdrop modal
-      </Button>
+      {authStore.user ? (<> <Button variant="secoundary" onClick={handleShow}>
+        Try Adding a New Category
+      </Button></>):(<SignUpModal/>)}
 
       <Modal
         show={show}
