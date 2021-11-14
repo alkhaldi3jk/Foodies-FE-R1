@@ -7,7 +7,7 @@ function CategoryItem({ category }) {
   return (
     <div>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={category.image}/>
+        <Card.Img variant="top"  src={category.image}  />
         <Card.Body>
           <Card.Title>{category.name}</Card.Title>
           <Card.Text>

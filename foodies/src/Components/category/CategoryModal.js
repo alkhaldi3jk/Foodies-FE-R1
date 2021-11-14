@@ -50,7 +50,7 @@ function CategoryModal() {
             controlId="formFile"
             type="file"
             name="image"
-            onSubmit={handleImage}
+            onChange={handleImage}
             className="mb-3"
           >
             <Form.Label>Default file input example</Form.Label>
