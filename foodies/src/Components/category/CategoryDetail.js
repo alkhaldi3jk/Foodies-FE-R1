@@ -5,14 +5,14 @@ import categoryStore from "../../stores/categoryStore";
 
 function CategoryDetail() {
   const { categorySlug } = useParams();
-  const CategoryDetail = categoryStore.categories.find(
+  const category = categoryStore.categories.find(
     (category) => category.slug === categorySlug
   );
 
   return (
-    <div>
-      {CategoryDetail}
-    </div>
+    <>
+      {category.name}
+    </>
   );
 }
 

@@ -24,14 +24,23 @@ function NavBar() {
                   <SignUpModal />
                 </>
               ) : (
+                <>
+                <div className={`user`}>
+                <h6 >{authStore.user.username}</h6>
+                </div>
+
+                <div>
                 <Nav.Link
                   href=""
                   variant="contained"
                   justify="space-between"
                   onClick={authStore.signOut}
                 >
+                  
                   Signout
                 </Nav.Link>
+                </div>
+                </>
               )}
             </Nav>
           </Container>

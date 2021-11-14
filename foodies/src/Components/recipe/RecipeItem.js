@@ -2,16 +2,15 @@ import { React } from "react";
 import { observer } from "mobx-react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import recipeStore from "../../stores/recipeStore";
+
 
 
 function RecipeItem({ recipe }) {
   return (
-    <div>
+    <>
       <Card style={{ width: "18rem" }}>
-        <Card.Img
-          variant="top"
-          src="https://www.sightseeingtoursitaly.com/wp-content/uploads/2019/06/Famous-Italian-dishes.jpg"
-        />
+        <Card.Img variant="top" src={recipe.image} />
         <Card.Body>
           <Card.Title>{recipe.name}</Card.Title>
           <Card.Text>
@@ -19,11 +18,11 @@ function RecipeItem({ recipe }) {
             bulk of the card's content.
           </Card.Text>
           {/* <Link to="/category/:categorySlug/recipes"> */}
-            <Button variant="primary">Go somewhere</Button>
+          <Button variant="primary">Go somewhere</Button>
           {/* </Link> */}
         </Card.Body>
       </Card>
-    </div>
+    </>
   );
 }
 

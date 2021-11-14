@@ -5,11 +5,13 @@ import NavBar from "./Components/home/NavBar";
 import CategoryList from "./Components/category/CategoryList";
 import { Container } from "react-bootstrap";
 import RecipeList from "./Components/recipe/RecipeList";
+import RecipeDetail from "./Components/recipe/RecipeDetail";
 import CategoryDetail from "./Components/category/CategoryDetail";
 function App() {
   return (
     <>
-      <NavBar />
+      <NavBar />  
+             {/* <RecipeDetail/> */}
       <Switch>
         <Route exact path="/category/:categorySlug/recipes">
           <Container>

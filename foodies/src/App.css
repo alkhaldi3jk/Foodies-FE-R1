@@ -10,6 +10,15 @@
 }
 
 
+.user h6{
+  color:white
+}
+
+/* .user {
+  display: flex;
+  justify-content: space-evenly;
+
+} */
 
 .App-header {
   background-color: #282c34;

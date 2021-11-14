@@ -1,9 +1,9 @@
 import { React, useState } from "react";
-import {  Form, Modal, Button } from "react-bootstrap";
+import { Form, Modal, Button } from "react-bootstrap";
 import { observer } from "mobx-react";
 import categoryStore from "../../stores/categoryStore";
 import authStore from "../../stores/authStore";
-import SignUpModal from '../auth/SignUpModal'
+import SignUpModal from "../auth/SignUpModal";
 function CategoryModal() {
   const [category, setCategory] = useState({
     name: "",
@@ -27,9 +27,15 @@ function CategoryModal() {
 
   return (
     <div>
-      {authStore.user ? (<> <Button variant="secoundary" onClick={handleShow}>
-        Try Adding a New Category
-      </Button></>):(<SignUpModal/>)}
+      {authStore.user ? (
+        <>
+          <Button variant="secoundary" onClick={handleShow}>
+            Try Adding a New Category
+          </Button>
+        </>
+      ) : (
+        <SignUpModal />
+      )}
 
       <Modal
         show={show}
@@ -38,7 +44,7 @@ function CategoryModal() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+          <Modal.Title>Add a Category</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form.Control
@@ -54,7 +60,7 @@ function CategoryModal() {
             onChange={handleImage}
             className="mb-3"
           >
-            <Form.Label>Default file input example</Form.Label>
+            <Form.Label>Share Your Idea</Form.Label>
             <Form.Control type="file" />
           </Form.Group>
         </Modal.Body>
@@ -62,8 +68,8 @@ function CategoryModal() {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleSubmit}>
-            Understood
+          <Button variant="secondary" onClick={handleSubmit}>
+            Submit
           </Button>
         </Modal.Footer>
       </Modal>
